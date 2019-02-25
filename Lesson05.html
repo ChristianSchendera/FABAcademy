@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Lesson 05 - Electronics Production</title> 
+</head>
+    
+<body>
+    <h1>Fabacademy</h1>
+    <h2>Lesson 05 - Electronic Productions<br>
+        Christian Schendera - Rhine-Waal University</h2>
+    
+    <hr>
+    
+    <table>
+     <td>
+        <h2>This weeks Assignment</h2>
+            <ul>
+                <li><p>Group assignment</p>
+            <ul>
+                <li>Characterize the <strong>design rules</strong> for your PCB production process</li>
+            </ul>
+                </li>
+                <li><p>Individual assignment</p>
+            <ul>
+                <li>Make an in-circuit programmer by <strong>milling</strong> the PCB, program it, then optionally, trying other processes.</li>
+            </ul>
+                </li>
+            </ul>
+    </td>
+        
+    <td>
+        <h2 id="learning-outcomes">Learning outcomes</h2>
+            <ul>
+                <li>Described the process of milling, stuffing, de-bugging and programming</li>
+                <li>Demonstrate correct workflows and identify areas for improvement if required</li>
+            </ul>
+    </td>
+        
+    <td>
+        <h2 id="have-you">Have you?</h2>
+        <ul>
+           <li>Shown how you made and programmed the board</li>
+            <li>Explained any problems and how you fixed them</li>
+            <li>Included a &#x2018;hero shot&#x2019; of your board</li>
+        </ul>
+    </td>
+    </table>
+    
+    <hr>
+    <br>
+    
+    <h2>Process</h2>
+    <p>This weeks assignment was about building our own ISP-Micro-Controller. ISP=In-System-Programmer</p>
+    <p>I wanted to use 
+        <a href="http://fab.cba.mit.edu/content/archive/projects/fabispkey/index.html">Andy's</a> image from the archive of the FabAcademy, which he builds on a conductive plate by milling the parts which should be isolated</p>
+    <h3> Here is his png</h3>
+    <img src="images/L4/fabisp_cmp.png">
+    
+    <h3> Design</h3>
+    <table align="center">
+    <td>
+        <img src="images/L4/fabisp_tbrd.png" width="400px">
+    </td>
+    <td>
+        <li>IC1 - The Brain - is the head of the ISP and consists of several chips</li>
+        <li>XTAL1 - also called Chrystal - is the clock</li>
+        <li>R1-6 - are Resistors - they determine the resistence flowing through the ISP</li>
+        <li>D1-2 - are Diods - they ensure, that current only flows in one direction</li>
+        <li>C1-4 - are Capacitors - They are transforming AC to DC</li>
+    </td>
+    </table>
+    
+    <h3>From image to machine code</h3>
+    <p>The file our machine can read is a .gcode <br>
+    I am using the site <a href=http://fabmodules.org>fabmodules.org</a> to generate the g.code by uploading the file and determining the specific instructions of our machine and how it should be milled</p>
+    
+    <table align="center">
+        <td><img src="images/L4/Bild1.png" width="350px">
+        </td>
+        <td>First insert the png<br>Our machine is the Roland mill which uses the file format .rml<br>And select PCB traces (1/64)<br>
+        </td>
+        <td><h4>I set the following instructions:</h4>
+        machine output - MDX-40<br>
+        speed in mm/s - 4<br>
+        zjog - 5mm<br>
+        cut depth - 0.0<br>
+        tool diameter - 0.2mm<br>
+        number of offsets - -1<br>
+        </td>
+        <td><img src="images/L4/Bild2.png" width="350px">
+        </td>
+        <td><h4>Same for the outter layer</h4>
+            But the cut depth is 0.1mm<br>
+            tool diameter 0.4mm<br>
+            number of offsets - 4<br>
+            offset overlap - 50%<br>
+        </td>
+    </table>
+    
+    <h3>Milling the conductive plate</h3>
+    <table align="center" border="1px">
+        <td><img src="images/L4/Bild4.jpeg" width="250px"></td>
+        <td>
+        <p>I plugged in the USB device and drop the file on the computer of the machine. <br>
+        First I wanted to mill the inlay, so i needed to change my tool into a diameter of 0.2mm. The screw can be opened with 2 keys</p>
+        </td>
+        <td><img src="images/L4/Bild3.jpeg" width="250px"></td>
+        <td><p>Now I can set my starting point<br>
+        I do that with the arrow keys which controlls the tool inside our machine. With apply I can fix this point to make sure I can later start again at the same point. The rpm is set to 15,000.</p>
+        </td>
+    </table>
+    <table align="center" border="1px">    
+        <td><img src="images/L4/Bild6.jpeg" width="250px"></td>
+        <td>To determine the Z-Axis I need to make sure, that the tool diamter slightly touches the conductive plate. I used a multimeter to get an audio signal when both touches.
+        </td>
+        <td><img src="images/L4/Bild7.jpeg" width="250px"></td>
+        <td>When the instructions are done, insert the file into the programm and press CUT</td>
+    </table>
+    <img src="images/L4/finished%20plate.jpg" width="66%" Valign="center">
+    
+    <h3>Placing the Components</h3>
+    <table>
+        <td>
+            <h4>For my FABISP I am using the following Components</h4>
+            <li>ATTiny 44</li>
+            <li>XTAL 1</li>
+            <li>2* 49.9 Ohm Resistors</li>
+            <li>499 Ohm Resitor</li>
+            <li>2* 10k Ohm Resistors</li>
+            <li>0 Ohm Resistor</li>
+            <li>2* 3.3 Diods</li>
+            <li>2* 1u Capacitors</li>
+            <li>2* 8p Capacitors</li>
+        </td>
+        <td><img src="images/L4/fabisp_sch.png" width="250px"></td>
+        <td><img src="images/L4/WhatsApp%20Image%202019-02-20%20at%2016.11.09.jpeg" width="450px"></td>
+        <td><h3>This is how my finished ISP looks like</h3></td>
+    </table>
+</body>
