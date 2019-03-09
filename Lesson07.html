@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
+<style>
+
+   div {
+    width:80%;
+    background-color: lightgrey;
+    margin:10%;
+    }
+
+    td {
+    border: 1px solid black;
+    }
+    
+</style>
     
 <head>
-    <title>Lesson 05 - Electronics Production</title> 
+    <title>Lesson 07 - Electronics Design</title> 
 </head>
     
 <body>
     <h1>Fabacademy</h1>
-    <h2>Lesson 05 - Electronic Productions<br>
+    <h2>Lesson 07 - Electronics Design<br>
         Christian Schendera - Rhine-Waal University</h2>
     
     <hr>
-    
     <table>
      <td>
         <h2>This weeks Assignment</h2>
             <ul>
                 <li><p>Group assignment</p>
             <ul>
-                <li>Use the test equipment in your lab to observe the operation of a microcontroller circuit board</li>
+                <li>Use the test equipment in your lab to observe the operation of a micro controller circuit board</li>
             </ul>
                 </li>
                 <li><p>Individual assignment</p>
@@ -34,7 +46,7 @@
         <h2 id="learning-outcomes">Learning outcomes</h2>
             <ul>
                 <li>Select and use software for circuit board design</li>
-                <li>Demonstrate workflows used in circuit board design</li>
+                <li>Demonstrate work flows used in circuit board design</li>
             </ul>
     </td>
         
@@ -50,3 +62,183 @@
     
     <hr>
     <br>
+
+<div>
+    <h2>Designing your own micro controller from scratch</h2>
+
+    <p>The task for this week is to re-design the Echo-hello-world Board uploaded in the FabAcademy <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.png">archive</a> and to retool it with at least an LED and a Button. <br>
+    For modelling the sketch and afterwards my board I have used Eagle Cad which is also made by Autodesk and can be easily plugged in to Fusion360 for later usage.</p
+</div>
+<div>
+    <h3>Getting the Components</h3>
+    <table VALIGN="center">
+        <ul>
+           <td valign="top"><img src="images/L7/1.png" width="100%">
+                <p>I am using a ATTiny44 - 8bit AVR Microcontroller.
+                </p>
+            </td>
+            <td valign="top"><img src="images/L7/3.png" width="100%">
+               <p><strong>It comes along with:</strong>
+                    <table>
+                        <td>8 PA Pins<ul><li>TX/RX</li><li>MOSI/MISO/SCK</li><li>3*Undefined</li></ul>
+                        </td>
+                        <td>    
+                        4 PB Pins<ul><li>RESET</li><li>CKOUT</li><li>XTAL1/XTAL2</li></ul>
+                        </td>
+                        <td valign="top">VCC/GND
+                        </td>
+                   </table>
+                </p>    
+            </td> 
+        </ul>
+    </table>
+
+    <table>
+        <ul>
+            <td valign="top"><img src="images/L7/4.png" width=100%>
+                <p>
+                    The CHKOUT will be used for my PWM Button. I have put y 10K Resistor in between and connected it to VCC and GND. Eagle easily asked me to connect it automatically when I labeled the sides. Also the Label for PWM_Button worked well. <br>
+                    The same I've done with the Reset Button.
+                </p>
+            </td>
+            <td valign="top"><img src="images/L7/5.png" width="100%">
+                <p>
+                    The task also was to include an LED. When you before did it with a Button, an LED also schould not be the Problem. I included a 499 Ohm Resistor in between and connected it to the Pin and to GND.
+                </p>
+            </td>
+        </ul>
+    </table>
+</div>
+<hr>
+<div>
+    <h3>Drawing the Sketch</h3>
+<table>
+    <ul>
+        <td valign="top"><img src="images/L7/6.png" width="100%">
+            <p>
+                This is my very first self made sketch of a PCB. In the first look it was really amazing to me, but I took the wrong Switches. These we do not use in our FabLab. Also the Traces are much too fine(1.2mm)
+            </p>
+        </td>
+
+        <td valign="top"><img src="images/L7/7.png" width="100%">
+            <p>
+                Next time, a little bit better than before, but a lot of traces were too near to each other. The arrow on the Top could have been easily solved, but I also wanted to place two traces between one Resistor, which definetily would be too fine for our milling machine.
+            </p>
+        </td>
+    </ul>
+</table>       
+            <p>
+                This is my final Design with traces in 1.6mm size.
+                <img src="images/L7/10.png" width="100%">
+            </p>
+
+<hr>
+<h4>Note:</h4>
+    <table>
+    <ul>
+        <td valign="top"><img src="images/L7/9.png" width="100%">
+            <p>
+                For the machine it is mandatory to hide unnecessary stuff, which should not be milled as well. We only want the Top and the Pads. Hide all other layers.
+            </p>
+        </td>
+        
+        <td valign="top"><img src="images/L7/8.png" width="100%">
+            <p>
+                Also the Names and Values should not be seen and the Pads or the machine kind of engraves all pads with the specific Names. We do not need this. Hide Names and Values!
+            </p>
+        </td>
+    </ul>
+</table>
+</div>
+<hr>
+<div>
+    <h3>Creating an Inside and an Outside</h3>
+<table>
+    <ul>
+        <td valign="top"><img src="images/L7/14.png" width="100%">
+            <p>
+                With the finished PNG from Eagle I imported it into Gimp to either cut out an inside PNG with the shape of my PCB (it should be very small and have an individual shape)
+            </p>
+        </td>
+        
+        <td valign="top"><img src="images/L7/15.png" width="100%">
+            <p>
+                The Rest is my Outside cut which I only had to invert because black is, what will be milled from the machine.
+            </p>
+        </td>
+    </ul>
+</table>
+</div>
+<hr>
+<div>
+    <h3>Machine code</h3>
+<table>
+    <ul>
+        <td valign="top"><img src="images/L7/12.png" width="100%">
+            <p>
+                As usual, to communicate with the machine you need the .gcode which I generate with <a href=http://fabmodules.org>fabmodules.org</a>.
+                <br>
+                For the Inside I used:
+                <ul>
+                    <li>cut depth   -   0.0mm</li>
+                    <li>tool diameter   -   0.2mm</li>
+                    <li>number of offsets   -   -1</li>
+                </ul>
+            </p>
+        </td>
+        
+        <td valign="top"><img src="images/L7/13.png" width="100%">
+            <p>
+                And for the Outside I used:
+                <ul>
+                    <li>cut depth   -   1.9mm</li>
+                    <li>tool diameter   -   0.4mm</li>
+                    <li>number of offsets   -   1</li>
+            </p>
+        </td>
+    </ul>
+</table>
+</div>
+
+
+<div>
+    <h3>Drawing the Sketch</h3>
+<table>
+    <ul>
+        <td valign="top"><img src="images/L7/1.png" width="100%">
+            <p>
+                
+            </p>
+        </td>
+        
+        <td valign="top"><img src="images/L7/1.png" width="100%">
+            <p>
+                
+            </p>
+        </td>
+    </ul>
+</table>
+</div>
+
+
+
+</body>
+
+<hr>
+<h3>Problems during the Process</h3>
+<p>
+I had a few problems to solve.
+First I was faced with the problem, that my Surface Pro has some issues by exporting files from my programms in the right scale. (For that purpose I had to use some one elses PC while editing images or exporting files from Eagle)
+
+The next problem was that Gimp with my tasks slightly relocates the oudside from the inside cut. This got me to cut out the inner section, happy that everything worked I started the outter and the tool drove entirely through my PCB. I fixed it by moving the PNG slightly to the other side and generating the .gcode again.
+
+Another problem was, when I was ready with soldering , I realized that one trace was crossed with a Pad. You can see it below (bottom, 4th traces from downside).
+
+<table>
+<td><img src="images/L7/WA1.jpeg" width="100%"></td>
+<td><img src="images/L7/WA6.jpeg" width="100%"></td>
+</table>
+I could have been repairing it by isolating the pad from the traces manually by milling a line between both, but I wanted to increase my skills. So I repeated all the tasks beginning from drawing the sketch.
+
+But by doing so I was able to increase my PCB more and more, so in the end it had a nice shape, with a complete offset. Also the soldering was really nice in the end.
+</p>
