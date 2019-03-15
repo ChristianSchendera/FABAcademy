@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html>
-    
+    <style>
+
+    	.container {
+    		width: 70%;
+    		margin: 5% 20% 5% 10%;
+			border: 1px solid;
+			padding: 1%;
+    	}
+
+    	.dropdown {
+  			position: relative;
+ 			 display: inline-block;
+		}
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 160px;
+  			overflow: auto;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+}
+    	.dropdown-content a{
+    		color: black;
+    		padding: 12px 16px;
+    		text-decoration: none;
+    		display: block;
+    	}
+    	.dropbtn {
+ 			background-color: #3498DB;
+ 			color: white;
+  			padding: 16px;
+  			font-size: 16px;
+  			border: none;
+  			cursor: pointer;
+		}
+		.show {display: block;}
+    </style>
+
+    <!--
+    <script>
+    	function myFunction() {
+ 		document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')){
+    	var dropdowns = document.getElementsByClassName("dropdown-content");
+    	var i;
+    	for (i = 0; i < dropdowns.length; i++) {
+     	var openDropdown = dropdowns[i];
+      	if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>-->
+
 <head>
     <title>Lesson 08 - Computer-Controlled Machining</title> 
 </head>
     
 <body>
+	<a href="index.html"><img src="images/Index/Fab_Lab_logo.svg.png" style="display: inline-block; width:10%; margin: 5% 10%"></a> <a href="http://fablab.hochschule-rhein-waal.de"><img src="images/Index/1200px-Hochschule_Rhein-Waal-logo.svg.png" style="display: inline-block; width:33%; margin: 5% 0%"></a>
+	<br>
+
+<!--
+
+<div class="dropdown">
+ 	<button onclick="myFunction()" class="dropbtn"><img src="images/Index/home.png" style="width:5%"></button>
+    <div class="dropdown-content">
+      <a href="index.html">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+</div>
+
+-->
+
     <h1>Fabacademy</h1>
     <h2>Lesson 08 - Computer-Controlled Machining<br>
         Christian Schendera - Rhine-Waal University</h2>
     
     <hr>
     <table>
-     <td>
+     <td valign="top">
         <h2>This weeks Assignment</h2>
             <ul>
                 <li><p>Group assignment</p>
@@ -29,7 +102,7 @@
             </ul>
     </td>
         
-    <td>
+    <td valign="top">
         <h2 id="learning-outcomes">Learning outcomes</h2>
             <ul>
                 <li>Select and use software for circuit board design</li>
@@ -37,7 +110,7 @@
             </ul>
     </td>
         
-    <td>
+    <td valign="top">
         <h2 id="have-you">Have you?</h2>
         <ul>
            <li>Shown your process using words/images/screenshots</li>
@@ -45,7 +118,99 @@
             <li>Included original design files (Eagle, KiCad, Inkscape, .cad - whatever)</li>
         </ul>
     </td>
-    </table>
-    
+    </table>  
     <hr>
     <br>
+    	<div class="container">
+    		<container>
+    			<h3>Assignment</h3>
+    			<p>
+    				In this week Iam gonna build something big with a CNC Mill. We have a 2.50*1.25 big sheet of Playwood and can build everything we want, as far as it is possible to stand without any glue (so it each shape has to fit into the other). <br> In my case, I wanted to build a Desk for the Bed. <br> Me and my girlfriend love to eat in bed on sunday mornings and even at evening it sometimes is very cosy to just eat diner while watching TV series. This desk cold also be used for holding the screen either while bathing or also in bed. It should contain 2 drinkholders which go inside the desk.
+    			</p>
+    		</container>
+    	</div>
+    	<h3 style="margin: 5% 20% 0% 10%;
+			padding: 1%">Design</h3>
+    			<table>
+    				<td valign="top">
+    					<img src="images/L8/1.png" width="24%">
+						<img src="images/L8/2.png" width="24%">
+						<img src="images/L8/3.png" width="24%">
+						<img src="images/L8/4.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/5.png" width="24%">
+						<img src="images/L8/6.png" width="24%">
+						<img src="images/L8/7.png" width="24%">
+						<img src="images/L8/8.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/9.png" width="24%">
+						<img src="images/L8/10.png" width="24%">
+						<img src="images/L8/11.png" width="24%">
+						<img src="images/L8/12.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/13.png" width="24%">
+						<img src="images/L8/14.png" width="24%">
+						<img src="images/L8/15.png" width="24%">
+						<img src="images/L8/16.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/17.png" width="24%">
+						<img src="images/L8/18.png" width="24%">
+						<img src="images/L8/19.png" width="24%">
+						<img src="images/L8/20.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/21.png" width="24%">
+						<img src="images/L8/22.png" width="24%">
+						<img src="images/L8/23.png" width="24%">
+						<img src="images/L8/24.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/25.png" width="24%">
+						<img src="images/L8/26.png" width="24%">
+						<img src="images/L8/27.png" width="24%">
+						<img src="images/L8/28.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/29.png" width="24%">
+						<img src="images/L8/30.png" width="24%">
+						<img src="images/L8/31.png" width="24%">
+						<img src="images/L8/32.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/33.png" width="24%">
+						<img src="images/L8/34.png" width="24%">
+						<img src="images/L8/35.png" width="24%">
+						<img src="images/L8/36.png" width="24%">
+    				</td>
+    				</table>
+    				<table>
+    				<td valign="top">
+    					<img src="images/L8/37.png" width="24%">
+						<img src="images/L8/38.png" width="24%">
+						<img src="images/L8/39.png" width="24%">
+						<img src="images/L8/40.png" width="24%">
+    				</td>
+    				</table>
+    				<img src="images/L8/final Design.png" style="width:70%; margin:5% 15%">
+
+    	</div>
