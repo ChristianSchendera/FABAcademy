@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+   div {
+    width:80%;
+    background-color: lightgrey;
+    margin:10%;
+    }
+
+    td {
+    border: 1px solid black;
+    }
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+    
+    </style>
+<head>
+    <title>final project</title> 
+</head>
+    
+<body>
+    <a href="index.html"><img src="images/Index/Fab_Lab_logo.svg.png" style="display: inline-block; width:10%; margin: 5% 10%"></a> <a href="http://fablab.hochschule-rhein-waal.de"><img src="images/Index/1200px-Hochschule_Rhein-Waal-logo.svg.png" style="display: inline-block; width:33%; margin: 5% 0%">
+    </a>
+    <h1>Fabacademy</h1>
+    <h2>final project - 3D-printer<br>
+        Christian Schendera - Rhine-Waal University</h2>
+    
+    <hr>
+    
+    <table>
+     <td>
+        <h2>The Final Project</h2>
+            <ul>
+                <p>As my final project I want to build a 3D-Printer from scratch<br>I looked at a few different designs and a combination of the system of the Ultimaker but with the x & y axis of of a prusa seemed for me good</p>
+            </ul>
+    </td>
+        
+    <td>
+        <h2 id="learning-outcomes">Learning outcomes</h2>
+            <ul>
+                <li>Create your own integrated design</li>
+                <li>Demonstrate 2D & 3D modelling capabilities applied to your own designs</li>
+                <li>Select and apply appropriate additive and subtractive techniques</li>
+                <li>Demonstrate competence in design, fabrication and programming of your own fabbed microcontroller PCB, including an input & output device</li>
+            </ul>
+    </td>
+        
+    <td>
+        <h2 id="have-you">Have you?</h2>
+        <ul>
+           <li>Made your slide: 1920 x 1080 pixels with your name, project name, Fab Lab name, a photo/render/sketch of your project, a brief description of what your project is/does</li>
+            <li>Made a ~1 minute (10MB/1080p) video of you explaining your project</li>
+            <li>Made a separate Final Project page that briefly summarises your project and</li>
+            <li>Included the BOM (Bill of Materials) for your project</li>
+            <li>Linked from this page to any weeks that you worked on your final project</li>
+            <li>Linked to your presentation.png and presentation.mp4</li>
+            <li>Included all of your original design files in the archive (2D & 3D, board files & code) No external hosting of final project files - discuss file sizes with your instructor</li>
+            <li>Included the license you chose</li>
+            <li>Acknowledged work done by others</li>
+        </ul>
+    </td>
+    </table>
+    
+    <hr>
+    <img src="images/final/showcase.jpg" width="100%">
+    <hr>
+    <br>
+
+    <div class="container">
+            <container>
+                <h3>Design in Fusion360</h3>
+                <p>
+                   the frame is made out of aluminum profiles with a size of 500*500mm<br>
+                   the printing bed should slide with 4 horizontal guides and 1 lead screw <br>
+                   on the x-axis I use 2 linear rods (horizontal parallel)<br>
+                   for the y-axis 2 linear rods (vertical parallel)<br>
+                   both axis slide with belts (3mm)<br>
+                   the extruder is a J-head with a bowden system (1,75mm) 
+                </p>
+            </container>
+<br>
+            <container>
+                <iframe src="https://myhub.autodesk360.com/ue2d19ef3/shares/public/SH919a0QTf3c32634dcf208a1d173830b842?mode=embed" width="1040" height="775" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </container>
+        </div>
+    <div class="container">
+            <container>
+                <h1>Design in detail</h1>
+            </container>
+<br>
+    <table valign="center">
+        <td valign="top">
+            <img src="images/final/02.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/03.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/04.jpg" width="340px" height="220px">
+        </td>
+    </table>
+    <table>
+        <td width="515px">
+            <p>all 8 edges should hold via a printed connector which is mounted on all 3 aluminum profiles (30*30mm) + 6*M6 flat-head screws & aluminum studs</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+    <table valign="center">
+        <td valign="top">
+            <img src="images/final/05.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/06.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/07.jpg" width="340px" height="220px">
+        </td>
+    </table>
+        <table>
+        <td width="515px">
+            <p>4 vertical hollow linear rods with a diameter of 16mm and a lenght of 550mm<br>the holder is printed and can be mounted on the two sides of the profiles</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+        <table valign="center">
+        <td valign="top">
+            <img src="images/final/08.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/09.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/10.jpg" width="340px" height="220px">
+        </td>
+    </table>
+      <table>
+        <td width="515px">
+            <p>for the y-axis I use 2 horizontal linear rods (12mm)<br>the holder are printed</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+        <table valign="center">
+        <td valign="top">
+            <img src="images/final/11.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/12.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/13.jpg" width="340px" height="220px">
+        </td>
+    </table>
+          <table>
+        <td width="515px">
+            <p>the bed is connected to 4 holder which slide on the vertical rods<br>the bearing have diameter of 26mm<br>the hot filament flows a bit to the sides, so I need a little tolerance. A test demonstrated that a tolerance of 2mm was sufficient to press the bearing into the whole without breaking it.</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+            <table valign="center">
+        <td valign="top">
+            <img src="images/final/14.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/15.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/16.jpg" width="340px" height="220px">
+        </td>
+    </table>
+          <table>
+        <td width="515px">
+            <p>the treaded rod has a diameter of 6mm and is screwed in a holder which is connected to the 20*20mm aluminum profile of the bed holder.</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+            <table valign="center">
+        <td valign="top">
+            <img src="images/final/17.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/18.png" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/19.jpg" width="340px" height="220px">
+        </td>
+    </table>
+          <table>
+        <td width="515px">
+            <p>the mount for the extruder slides on 12mm linear rods with a distance of 270mm<br>270 (distance) - 30mm (width extruder mount = gives us a printing area of 240mm</p>
+        </td>
+        <td width="515px">
+            <p>20% infill<br>4mm nozzle<br>0,15mm layer height<br>wall-thickness of 1,5mm all-around</p>
+        </td>
+    </table>
+            <table valign="center">
+        <td valign="top">
+            <img src="images/final/20.jpg" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/21.jpg" width="340px" height="220px">
+        </td>
+        <td valign="top">
+            <img src="images/final/22.jpg" width="340px" height="220px">
+        </td>
+    </table>
+    </table>
+          <table>
+        <td width="515px">
+            <p>the stepper (Nema17) moves the belt (3mm) which is fixed on the mount of the extruder<br>on the other side an Idler mirrors the move of the belt</p>
+        </td>
+        <td width="515px">
+            <p></p>
+        </td>
+    </table>
+</div>
+
+    <div class="container">
+            <container>
+                <h1>Electronics</h1>
+                <p> I bought a kit with an Arduino Mega + ramps + 5 modules A4988 + LCD Display</p>
+                    <a href="https://www.ebay.de/itm/Für-Arduino-3D-Drucker-Mega-2560-RAMPS-1-4-5-A4988-Modules-12864-LCD-Display/362539665786?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649">ebay-link</a>
+            </container>
+<br>
+    <table valign="center">
+        <td valign="top">
+            <img src="images/final/23.jpg" width="512px" height="330px">
+            <p>the assembled parts of all electronics<br>I only needed 4 modules, because I only have one z-driver</p>
+        </td>
+        <td valign="top">
+            <img src="images/final/24.png" width="512px" height="330px">
+            <p>RepRap Arduino Mega Pololu Shield 1.4</p>
+            <a href="https://reprap.org/wiki/RAMPS_1.4#Bottom_pins">source</a>
+        </td>
+    </table>
+</div>
+       <div class="container">
+            <container>
+                <h1>Issues</h1>
+                <p>This design, to me, seemed quite good and also nearly all parts were done<br>BUT I had a few problems</p>
+            </container>
+<br>
+    <table valign="center">
+        <td valign="top">
+            <img src="images/final/25.jpg" width="512px" height="330px">
+        </td>
+        <td valign="top">
+            <img src="images/final/26.jpg" width="512px" height="330px">
+        </td>
+    </table>
+    <table>
+        <td valign="top">
+            <img src="images/final/27.jpg" width="512px" height="330px">
+        </td>
+        <td width="512px" height="330px">
+            <p>the linear rods are not were even. So the bed could not slide very fine<br>when I tried to force it, the holder broke very fast(what also comes from the printed parts)<br>same problem was with the holder of the lead screw<br><br>I am sure I need a different design with differend linear guides (maybe some more expensive than the hollow rods)</p>
+        </td>
+    </table>
+    <br><br><br>
+          <p>another problem which does not satisfy myself with the design is the little printing area, compared to the big size of the frame<br>240*380mm (nearly half of the frame),<br> which could definetely be improved by changing a few things:<br><li>narrowing the part on the left picture</li><li>using other corner connectors instead of these big, space stealing printed ones 40*40mm (right pic)</li></p>
+    <table valign="center">
+        <td valign="top">
+            <img src="images/final/28.jpg" width="512px" height="330px">
+        </td>
+        <td valign="top">
+            <img src="images/final/29.jpg" width="512px" height="330px">
+        </td>
+    </table>
+</div>
+
+ <div class="container">
+            <container>
+                <h1> a few more impressions wihtout words</h1>
+            </container>
+                <table valign="center">
+                    <td valign="top">
+                        <img src="images/final/30.jpg" width="340px" height="220px">
+                    </td>
+                    <td valign="top">
+                        <img src="images/final/31.jpg" width="340px" height="220px">
+                    </td>
+                    <td valign="top">
+                        <img src="images/final/32.jpg" width="340px" height="220px">
+                    </td>
+                </table>
+                <table valign="center">
+                    <td valign="top">
+                        <img src="images/final/33.jpg" width="340px" height="220px">
+                    </td>
+                    <td valign="top">
+                        <img src="images/final/34.jpg" width="340px" height="220px">
+                    </td>
+                    <td valign="top">
+                        <img src="images/final/35.jpg" width="340px" height="220px">
+                    </td>
+                </table>       
+        </div>
