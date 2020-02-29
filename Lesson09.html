@@ -75,7 +75,88 @@
             <container>
                 <h3>Assignment</h3>
                 <p>
-                    programming a microcontroller
+                    programming a microcontroller<br>
+                    I simply want to make an LED turn on and off
                 </p>
             </container>
         </div>
+<div>
+    <container>
+        <h3>Arduino setup</h3>
+        <p></p>
+            <table valign="center">
+                <td valign="top" width="512px">
+                    <img src="images/L9/03.png" height="300px">
+                    <p>using this schematic you can wire the LED correctly</p>
+                </td>
+                <td valign="top">
+                    <img src="images/L9/04.jpg" width="512px" height="300px">
+                    <p>this is how it looks like on a breadbord</p>
+                </td>
+            </table>
+            <table valign="center">
+                <td valign="top">
+                    <img src="images/L9/01.png" width="512px" height="300px">
+                    <p>than you go to tools->Board-> and select your Device</p>
+                </td>
+                <td valign="top">
+                    <img src="images/L9/06.jpg" width="512px" height="300px">
+                    <p>when you press this button, you can save your file <br>--> it automatically proves for correctness<br> --> than press compile and burn the bootloader</p>
+                </td>
+            </table>
+    </container>
+</div>
+
+
+<div>
+    <container>
+        <h3>Programming</h3>
+        <p>Let us start with a few programming definitions</p>
+        <table align="center" style="background-color:white;">
+                <tbody align="center">
+                    <tr align="center">
+                    <td width="50%">
+                        <p>void setup()</p>
+                        <p>{</p>
+                        <p>pinMode(13, OUTPUT);</p>
+                        <p>}</p>
+                        <p>void loop()</p>
+                        <p>{</p>
+                        <p>digitalWrite(13, HIGH);</p>
+                        <p>delay(1000);</p>
+                        <p>digitalWrite(13, LOW);</p>
+                        <p>delay(1000);</p>
+                        <p>}</p>
+                    </td>
+                    <td width="50%">
+                        <p>here the Setup starts</p>
+                        <p>the sections of the setup starts here.</p>
+                        <p>Pin 13 should be an output.</p>
+                        <p>section where setup ends.</p>
+                        <p>main program starts</p>
+                        <p>programming section starts.</p>
+                        <p>HIGH for giving power to PIN13 (LED on).</p>
+                        <p>wait 1000 milli-seconds (one second).</p>
+                        <p>LOW for cutting power of PIN13 (LED off).</p>
+                        <p>wait 1000 milli-seconds (one second).</p>
+                        <p>programming section ends</p>
+                    </td>
+                    </tr>
+                </tbody>
+        </table>
+    </container>
+</div>
+<div>
+    <container>
+        <h3>Result</h3>
+        <p></p>
+            <table valign="center">
+                <td valign="top" width="512px">
+                    <img src="images/L9/07.png" width="512px" height="300px">
+                    <p>once you have done all these steps, the bootloader should be uploaded correctly</p>
+                </td>
+                <td valign="top">
+                    <img src="images/L9/05.jpg" width="512px" height="300px">
+                    <p>LED automatically turns on and off every second</p>
+                </td>
+            </table>
